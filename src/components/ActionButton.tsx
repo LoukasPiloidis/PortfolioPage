@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { palette, typography } from "../utils/variables";
+import { palette, typography, screenSize } from "../utils/variables";
 import { useContext, useMemo } from "react";
 import { Context } from "../context/ContextCreator";
-import { Link } from "react-router-dom";
 
 const { blue, white } = palette;
 const {
-  size: { medium },
+  size: { medium, small },
 } = typography;
+const { mobile } = screenSize;
 
 const Button = styled(Link)`
   width: 180px;
@@ -27,6 +28,16 @@ const Button = styled(Link)`
 
   &:hover {
     transform: scale(0.98);
+  }
+
+  @media (max-width: ${mobile}) {
+    width: 120px;
+    height: 54px;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    margin: auto;
+    font-size: ${small};
   }
 `;
 
