@@ -5,6 +5,7 @@ import { copies } from "../utils/copies.ts";
 import Title from "../components/Title.tsx";
 import Subtitle from "../components/Subtitle.tsx";
 import { screenSize } from "../utils/variables.ts";
+import ActionButton from "../components/ActionButton.tsx";
 
 const {
   homePage: { FULL_NAME, JOB_TITLE, MOTO },
@@ -12,8 +13,9 @@ const {
 const { mobile } = screenSize;
 
 const Wrapper = styled.div`
-  width: 50%;
-  margin: 15% auto 0;
+  max-width: 570px;
+  margin-top: 15%;
+  align-self: center;
   display: flex;
   flex-direction: column;
   gap: 56px;
@@ -41,13 +43,15 @@ const Home = () => {
   }, [activePath, setActivePath]);
 
   return (
-    <Wrapper>
-      <NameAndJobTitleWrapper>
-        <Title>{FULL_NAME}</Title>
-        <Subtitle>{JOB_TITLE}</Subtitle>
-      </NameAndJobTitleWrapper>
-      <Subtitle>{MOTO}</Subtitle>
-    </Wrapper>
+    <ActionButton>
+      <Wrapper>
+        <NameAndJobTitleWrapper>
+          <Title>{FULL_NAME}</Title>
+          <Subtitle>{JOB_TITLE}</Subtitle>
+        </NameAndJobTitleWrapper>
+        <Subtitle>{MOTO}</Subtitle>
+      </Wrapper>
+    </ActionButton>
   );
 };
 

@@ -10,12 +10,18 @@ const {
 } = typography;
 const { mobile } = screenSize;
 
+const ButtonWrapper = styled.div`
+  min-height: calc(100vh - 104px);
+  padding: 0 5% 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
 const Button = styled(Link)`
   width: 180px;
   height: 80px;
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
+  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +54,7 @@ const buttonText = {
   "/contact": "Home",
 };
 
-const ActionButton = () => {
+const ActionButton: React.FC<React.PropsWithChildren> = ({ children }) => {
   const { activePath } = useContext(Context);
 
   const getRedirectPath = useMemo(() => {
@@ -64,7 +70,12 @@ const ActionButton = () => {
     return "/";
   }, [activePath]);
 
-  return <Button to={getRedirectPath}>{buttonText[activePath]}</Button>;
+  return (
+    <ButtonWrapper>
+      {children}
+      <Button to={getRedirectPath}>{buttonText[activePath]}</Button>
+    </ButtonWrapper>
+  );
 };
 
 export default ActionButton;
