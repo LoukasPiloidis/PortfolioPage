@@ -3,7 +3,7 @@ import { Background } from "./components/BackgroundImage";
 import Burger from "./components/Burger";
 import About from "./routes/About";
 import Home from "./routes/Home";
-import ActionButton from "./components/ActionButton";
+import Portfolio from "./routes/Portfolio";
 
 const App = () => {
   return (
@@ -14,8 +14,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
         </Routes>
-        {/* <ActionButton /> */}
       </BrowserRouter>
     </>
   );

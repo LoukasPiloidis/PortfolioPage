@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `;
 
 const {
-  AboutPage: {
+  aboutPage: {
     TITLE,
     ACADEMIC_BACKGROUND,
     PROGRAMMING_BACKGROUND,
