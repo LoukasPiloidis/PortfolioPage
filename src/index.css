@@ -6,6 +6,10 @@ body {
   font-family: "Alice", serif;
 }
 
+#root {
+  position: relative;
+}
+
 button {
   background: none;
   color: inherit;

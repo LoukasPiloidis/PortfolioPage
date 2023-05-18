@@ -5,8 +5,11 @@ export const palette = {
 
 export const typography = {
   size: {
+    large: "48px",
     medium: "32px",
     small: "24px",
+    mobileLarge: "36px",
+    mobileSmall: "20px",
   },
 };
 

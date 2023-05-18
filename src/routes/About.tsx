@@ -4,11 +4,12 @@ import { copies } from "../utils/copies";
 import { Context } from "../context/ContextCreator";
 import Title from "../components/Title";
 import Subtitle from "../components/Subtitle";
+import ActionButton from "../components/ActionButton";
 
 const Wrapper = styled.div`
   width: 90%;
   max-height: 80%;
-  margin: auto;
+  margin: 0 auto 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -35,13 +36,15 @@ const About = () => {
   }, [activePath, setActivePath]);
 
   return (
-    <Wrapper>
-      <Title>{TITLE}</Title>
-      <Subtitle>{ACADEMIC_BACKGROUND}</Subtitle>
-      <Subtitle>{PROGRAMMING_BACKGROUND}</Subtitle>
-      <Subtitle>{CURRENT_ROLE}</Subtitle>
-      <Subtitle>{HOBBIES}</Subtitle>
-    </Wrapper>
+    <ActionButton>
+      <Wrapper>
+        <Title>{TITLE}</Title>
+        <Subtitle>{ACADEMIC_BACKGROUND}</Subtitle>
+        <Subtitle>{PROGRAMMING_BACKGROUND}</Subtitle>
+        <Subtitle>{CURRENT_ROLE}</Subtitle>
+        <Subtitle>{HOBBIES}</Subtitle>
+      </Wrapper>
+    </ActionButton>
   );
 };
 

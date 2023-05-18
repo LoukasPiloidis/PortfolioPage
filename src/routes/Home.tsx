@@ -31,6 +31,10 @@ const NameAndJobTitleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media (max-width: ${mobile}) {
+    gap: 16px;
+  }
 `;
 
 const Home = () => {
