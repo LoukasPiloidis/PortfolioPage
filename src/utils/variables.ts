@@ -8,6 +8,7 @@ export const typography = {
     large: "48px",
     medium: "32px",
     small: "24px",
+    placeholder: "20px",
     mobileLarge: "36px",
     mobileSmall: "20px",
   },

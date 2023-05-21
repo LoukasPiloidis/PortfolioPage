@@ -4,6 +4,7 @@ import Burger from "./components/Burger";
 import About from "./routes/About";
 import Home from "./routes/Home";
 import Portfolio from "./routes/Portfolio";
+import Contact from "./routes/Contact";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </>

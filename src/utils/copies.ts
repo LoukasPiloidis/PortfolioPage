@@ -18,4 +18,9 @@ export const copies = {
   portfolioPage: {
     TITLE: "Portfolio",
   },
+  contactPage: {
+    TITLE: "Contact",
+    EMAIL_TITLE: "Get in touch",
+    EMAIL_BUTTON: "Send",
+  },
 };
