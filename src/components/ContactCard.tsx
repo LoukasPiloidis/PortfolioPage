@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import { typography, palette, screenSize } from "../utils/variables";
-import { copies } from "../utils/copies";
 import messenger from "../assets/messenger.svg";
 import linkedin from "../assets/linkedin.svg";
 import viber from "../assets/viber.svg";
 import whatsapp from "../assets/whatsapp.svg";
 import EmailForm from "./EmailForm";
 
-const { medium, placeholder, mobileSmall } = typography.size;
-const { white, blue } = palette;
+const { mobileSmall } = typography.size;
+const { white } = palette;
 
 const { mobile } = screenSize;
 
