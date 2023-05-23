@@ -5,10 +5,11 @@ import messenger from "../assets/messenger.svg";
 import linkedin from "../assets/linkedin.svg";
 import viber from "../assets/viber.svg";
 import whatsapp from "../assets/whatsapp.svg";
+import EmailForm from "./EmailForm";
 
 const { medium, placeholder, mobileSmall } = typography.size;
 const { white, blue } = palette;
-const { EMAIL_BUTTON, EMAIL_TITLE } = copies.contactPage;
+
 const { mobile } = screenSize;
 
 const Wrapper = styled.div`
@@ -22,81 +23,6 @@ const Wrapper = styled.div`
     height: auto;
     width: 350px;
     flex-direction: column;
-  }
-`;
-
-const EmailForm = styled.form`
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 24px 66px;
-  gap: 24px;
-
-  @media (max-width: ${mobile}) {
-    width: auto;
-    padding: 24px;
-  }
-`;
-
-const EmailTitle = styled.span`
-  font-size: ${medium};
-  color: ${white};
-`;
-
-const EmailBody = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-`;
-
-const EmailInput = styled.input`
-  height: 34px;
-  background-color: ${white};
-  font-size: ${placeholder};
-
-  &::placeholder {
-    font-size: ${placeholder};
-    text-align: center;
-  }
-`;
-
-const EmailTextArea = styled.textarea`
-  height: 200px;
-  font-family: "Alice", serif;
-  font-size: ${placeholder};
-  background-color: ${white};
-
-  &::placeholder {
-    font-size: ${placeholder};
-    text-align: center;
-  }
-`;
-
-const EmailButton = styled.input`
-  width: 112px;
-  height: 56px;
-  align-self: flex-end;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 4px;
-  background-color: ${blue};
-  color: ${white};
-  font-size: ${medium};
-  box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.08);
-  transition: all 0.3s;
-
-  &:hover {
-    transform: scale(0.98);
-  }
-
-  @media (max-width: ${mobile}) {
-    width: auto;
-    height: auto;
-    font-size: ${mobileSmall};
-    padding: 8px;
   }
 `;
 
@@ -129,19 +55,7 @@ const SocialIcon = styled.img`
 const ContactCard = () => {
   return (
     <Wrapper>
-      <EmailForm
-        action="mailto:loukasmalias@hotmail.com"
-        method="post"
-        encType="text/plain"
-      >
-        <EmailTitle>{EMAIL_TITLE}</EmailTitle>
-        <EmailBody>
-          <EmailInput placeholder="Your name"></EmailInput>
-          <EmailInput placeholder="Your email address"></EmailInput>
-          <EmailTextArea placeholder="Your inquiry"></EmailTextArea>
-        </EmailBody>
-        <EmailButton type="submit" value={EMAIL_BUTTON} />
-      </EmailForm>
+      <EmailForm />
       <SocialWrapper>
         <SocialIconWrapper href="http://m.me/loukas.piloidis" target="_blank">
           <SocialIcon src={messenger} />
